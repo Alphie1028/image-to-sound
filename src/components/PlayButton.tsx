@@ -1,5 +1,6 @@
 import React, { useState, useEffect } from "react";
 import * as Tone from "tone";
+import "../../styles/PlayButton.css";
 
 type PlayButtonProps = {
   notes: string[];
@@ -50,14 +51,14 @@ const PlayButton: React.FC<PlayButtonProps> = ({ notes, getSynth }) => {
     <div>
       <button
         onClick={handlePlayPause}
-        className={`mt-4 px-4 py-2 ${isPlaying ? "bg-gray-400" : "bg-green-500"} text-white rounded-md`}
+        className={`play-button ${isPlaying ? "active" : ""}`}
       >
         {isPlaying && !isPaused ? "Pause" : "Play"}
       </button>
       {isPlaying && (
         <button
           onClick={handleStop}
-          className="mt-4 ml-2 px-4 py-2 bg-red-500 text-white rounded-md"
+          className={`stop-button ${isPlaying ? "active" : ""}`}
         >
           Stop
         </button>

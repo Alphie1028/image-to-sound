@@ -1,0 +1,70 @@
+.synth-choice {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    width: 550px;
+    /* Adjusted for fixed image size */
+    padding: 30px;
+    border-radius: 12px;
+    box-shadow: 0px 0px 20px #ff00ff;
+    background: rgba(10, 10, 20, 0.9);
+    color: white;
+    text-align: center;
+    font-family: 'Press Start 2P', cursive;
+    margin: 50px auto;
+}
+.upload-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-bottom: 20px;
+}
+
+.upload-buttons {
+    display: flex;
+    gap: 10px;
+    margin-top: 10px;
+}
+
+.synth-container {
+    display: flex;
+    width: 100%;
+    gap: 20px;
+    justify-content: center;
+}
+
+.left-panel {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 45%;
+}
+
+.synth-buttons {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+    margin-top: 10px;
+    width: 100%;
+    align-items: center;
+}
+
+.synth-button {
+    width: 100%;
+    max-width: 200px;
+    padding: 12px;
+    font-size: 14px;
+    border: 2px solid #ff00ff;
+    background: rgba(255, 0, 255, 0.2);
+    color: white;
+    text-transform: uppercase;
+    cursor: pointer;
+    transition: all 0.3s ease-in-out;
+}
+
+.synth-button:hover,
+.synth-button.active {
+    background: #ff00ff;
+    box-shadow: 0px 0px 15px #ff00ff;
+}

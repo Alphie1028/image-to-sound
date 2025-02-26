@@ -2,6 +2,7 @@ import React, { useState, useEffect } from "react";
 import { mapColorToNote } from "../../utils/noteUtils";
 import PlayButton from "./PlayButton";
 import * as Tone from "tone";
+import "../../styles/ImageToNotes.css";
 
 const ImageToNotes: React.FC<{ imageFile: File; getSynth: () => Tone.Synth | Tone.FMSynth | Tone.AMSynth | Tone.DuoSynth | Tone.MonoSynth }> = ({ imageFile, getSynth }) => {
   const [resizedImage, setResizedImage] = useState<string | null>(null);
@@ -41,11 +42,17 @@ const ImageToNotes: React.FC<{ imageFile: File; getSynth: () => Tone.Synth | Ton
   }, [imageFile]);
 
   return (
-    <div className="mt-4">
-      {resizedImage && <img src={resizedImage} alt="Resized" className="border rounded-lg shadow" />}
-      {generatedNotes.length > 0 && <PlayButton notes={generatedNotes} getSynth={getSynth} />}
+    <div className="right-panel">
+      <div className="image-container">
+        {resizedImage && <img src={resizedImage} alt="Resized" className="image-preview" />}
+      </div>
+      <div className="controls-container">
+        {generatedNotes.length > 0 && <PlayButton notes={generatedNotes} getSynth={getSynth} />}
+      </div>
     </div>
   );
+
+
 };
 
 export default ImageToNotes;

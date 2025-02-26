@@ -1,0 +1,45 @@
+/* Global styles for consistent font and color */
+body {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  background: radial-gradient(circle, rgba(10, 10, 20, 1) 10%, rgba(30, 0, 50, 1) 90%);
+  color: #ff00ff;
+  /* Neon Pink */
+  font-family: 'Press Start 2P', cursive;
+  text-shadow: 0px 0px 8px #ff00ff;
+  margin: 0;
+}
+
+/* Apply to all buttons, headers, labels, and text */
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p,
+label,
+button {
+  color: #ff00ff;
+  font-family: 'Press Start 2P', cursive;
+  text-shadow: 0px 0px 8px #ff00ff;
+}
+
+/* Universal Button Styling */
+button {
+  background: rgba(255, 0, 255, 0.2);
+  border: 2px solid #ff00ff;
+  color: white;
+  padding: 10px;
+  cursor: pointer;
+  text-transform: uppercase;
+  transition: all 0.3s ease-in-out;
+  text-shadow: 0px 0px 8px #ff00ff;
+}
+
+button:hover {
+  background: #ff00ff;
+  box-shadow: 0px 0px 15px #ff00ff;
+}

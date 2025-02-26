@@ -1,12 +1,14 @@
-import './App.css'
+import '../styles/App.css'
 import FileUpload from './components/FileUpload'
 
 function App() {
 
   return (
-    <>
-    <FileUpload></FileUpload>
-    </>
+    <div className="app-container">
+      <div  className="upload-container">
+       <FileUpload></FileUpload> 
+      </div>
+    </div>
   )
 }
 
