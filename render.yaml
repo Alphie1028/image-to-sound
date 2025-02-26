@@ -1,0 +1,11 @@
+services:
+  - name: image-to-sound
+    type: web
+    env: docker
+    repo: https://github.com/Alphie1028/image-to-sound
+    branch: main
+    plan: free
+    dockerfilePath: ./Dockerfile
+    envVars:
+      - key: NODE_ENV
+        value: production
